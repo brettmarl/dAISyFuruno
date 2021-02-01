@@ -1,0 +1,17 @@
+{
+  "name": "dAISyFuruno",
+  "version": "1.0.0",
+  "description": "Script that reads AIS data from a dAISy Pi Hat and emits Furuno-Specific ethernet NMEA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Brett Marl",
+  "license": "ISC",
+  "dependencies": {
+    "readline": "^1.3.0",
+    "serialport": "^9.0.6",
+    "shortid": "^2.2.16"
+  }
+}

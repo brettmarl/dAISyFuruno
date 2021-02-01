@@ -1,0 +1,29 @@
+{
+    "dAISyInput": 
+        {
+            "device" : "/dev/serial0",
+            "baudRate" : 38400,
+            "dataBits" : 8,
+            "parity" : "none",
+            "stopBits" : 1
+        },
+    "UDPEmitters" :
+        [
+            {
+                "enabled" : true,
+                "comment" : "Broadcast to LAN for NavNet in Furuno format (note furuno_mode setting)",
+                "broadcast_addr" : "172.31.255.255",
+                "broadcast_port" : 10021,
+                "furuno_mode" : true
+            },
+            {
+                "enabled" : true,
+                "comment" : "Broadcast to WLAN for Navionics, OpenCPN etc",
+                "broadcast_addr" : "192.168.4.255",
+                "broadcast_port" : 10110,
+                "furuno_mode" : false
+            }
+        ],
+    "DemoMode" : false
+
+}
