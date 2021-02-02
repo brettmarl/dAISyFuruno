@@ -3,4 +3,6 @@ This app helps to connect AIS output from a dAISy Raspberry Pi hat with older Fu
 that is required to get them to work. 
 
 For more details see here:
-https://bluedefender.medium.com/feeding-ais-data-to-a-furuno-navnet-vx2-plotter-with-a-raspberry-pi-6348bbca6909
+
+[Feeding AIS Data to Furuno NavNetVX2 Plotter with Rraspberry Pi](https://bluedefender.medium.com/feeding-ais-data-to-a-furuno-navnet-vx2-plotter-with-a-raspberry-pi-6348bbca6909)
+
