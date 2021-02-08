@@ -1,5 +1,8 @@
 const { EventEmitter } = require('events');
 
+// sample data of a tug boat moving across Rosario Strait. 
+// in demo-mode look on your map in roughly this location to see it moving
+// https://www.google.com/maps/@48.5911053,-122.7963341,12.43z 
 var test_data = 
 `!AIVDM,1,1,,B,15Mid9001Io>5IpKk?8Mbc>62@1w,0*2A
 !AIVDM,1,1,,A,15Mid9001Jo>5B\`KkB0MV;?228Cg,0*37

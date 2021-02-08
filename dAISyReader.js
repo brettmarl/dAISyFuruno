@@ -37,13 +37,13 @@ class dAISyReader extends EventEmitter {
             
             // when we receive a line from dAISy we test to make sure it smells like an AIS sentence and pass it on 
             // note we don't do any validatation the messages - we just echo what comes off the serial port of dAISy 
-            if (msg.startWith("!AIVDM") || msg.startWith("!AIVDO"))
-            {
+            if (line.startWith("!AIVDM") || line.startWith("!AIVDO")) {
+                
                 // ensure lines end in linefeed
-                if (!msg.endsWith("\n"))
-                    msg = msg + "\r\n";
+                if (!line.endsWith("\n"))
+                    line = line + "\r\n";
 
-                this.emit('message', msg);
+                this.emit('message', line);
             }
         });
 

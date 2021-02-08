@@ -9,8 +9,8 @@ console.log("[Starting dAISyFuruno]");
 var udpEmitters = [];
 
 // create the UDP Emitters
-for (var output_config of config.UDPEmitters)
-{
+for (var output_config of config.UDPEmitters) {
+    
     if (output_config.enabled)
         udpEmitters.push(new UDPEmitter(output_config));
 }
@@ -18,8 +18,8 @@ for (var output_config of config.UDPEmitters)
 // create our reader and wire up the message event
 var reader = config.DemoMode ? new DemoModeReader() : new dAISyReader();
 
-reader.on("message", function(msg)
-{
+reader.on("message", function(msg) {
+    
     console.log(`[RX] ${msg.trim()}`);
 
     // when we receive AIS sentences, send to the UDPEmitters to echo to the network
