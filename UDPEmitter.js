@@ -21,9 +21,6 @@ class UDPEmitter {
   
     broadcast(payload) {
   
-      if (!this.server)
-        return;
-
       var output = Buffer.from(payload);
       if (this.furuno_mode)
       {

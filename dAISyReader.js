@@ -33,18 +33,18 @@ class dAISyReader extends EventEmitter {
             console.log(`[Connected to dAISy on ${config.dAISyInput.device}]`);
         });
 
-        lineReader.on('line', function (line) {
+        lineReader.on('line', (line) => {
             
             // when we receive a line from dAISy we test to make sure it smells like an AIS sentence and pass it on 
             // note we don't do any validatation the messages - we just echo what comes off the serial port of dAISy 
-            if (line.startWith("!AIVDM") || line.startWith("!AIVDO")) {
-                
-                // ensure lines end in linefeed
-                if (!line.endsWith("\n"))
-                    line = line + "\r\n";
+            if (!line.startsWith("!AIVDM"))
+                return;
 
-                this.emit('message', line);
-            }
+            // ensure lines end in linefeed
+            if (!line.endsWith("\n"))
+                line = line + "\r\n";
+
+            this.emit('message', line);
         });
 
     }
